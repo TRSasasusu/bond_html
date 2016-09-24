@@ -1,7 +1,8 @@
 import sys
 
 if __name__ == '__main__':
-    if len(sys.argv) < 2:
+    if len(sys.argv) < 4:
+        print("Usage: python bond_html.py hoge.html -o hoge_out.html")
         sys.exit()
 
     target_file = open(sys.argv[1], 'r')
@@ -35,6 +36,6 @@ if __name__ == '__main__':
 
         i = index_of_end_of_filename + 2
 
-    output_file = open("test_out.html", "w")
+    output_file = open(sys.argv[3], "w")
     output_file.write(output_txt)
     output_file.close()
