@@ -11,9 +11,9 @@ You can include html in html without php and js.
 ### bond.html
 ```
 <head><title>bond_html</title></head>
-```
-```$ python bond_html.py hoge.html -o hoge_out.html```
+```  
 Then,  
+```$ python bond_html.py hoge.html -o hoge_out.html```
 ### hoge_out.html
 ```
 <html>
