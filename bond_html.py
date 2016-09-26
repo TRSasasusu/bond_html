@@ -7,7 +7,7 @@ if __name__ == '__main__':
         print("Usage: python bond_html.py hoge.html -o hoge_out.html")
         sys.exit()
 
-    target_file = open(sys.argv[1], 'r')
+    target_file = open(sys.argv[1], 'r', encoding='utf-8')
     target_txt = target_file.read()
     target_file.close()
 
@@ -30,7 +30,7 @@ if __name__ == '__main__':
 #        for i in range(index_of_end_of_filename - index - 1):
 #            filename += target_txt[i + index + 1]
 
-        bonded_file = open(filename, 'r')
+        bonded_file = open(filename, 'r', encoding='utf-8')
         bonded_text = bonded_file.read()
         bonded_file.close()
 
@@ -38,6 +38,6 @@ if __name__ == '__main__':
 
         i = index_of_end_of_filename + 2
 
-    output_file = open(sys.argv[3], "w")
+    output_file = open(sys.argv[3], "w", encoding='utf-8')
     output_file.write(output_txt)
     output_file.close()
