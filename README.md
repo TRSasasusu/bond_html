@@ -87,7 +87,7 @@ $ python baz.html -o baz_out.html
 ```
 <html>
 	<body>
-		This is bar.
+		This is baz.
 <li>foo</li>
 <li>bar</li>
 <li>BAZ</li>
