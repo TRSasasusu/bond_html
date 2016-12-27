@@ -2,6 +2,9 @@
 
 import sys
 
+def change_with_var(varname):
+    v
+
 if __name__ == '__main__':
     if len(sys.argv) < 4:
         print("Usage: python bond_html.py hoge.html -o hoge_out.html")
@@ -54,9 +57,12 @@ if __name__ == '__main__':
                 print("Error!")
                 sys.exit()
 
-            splited_bonded_text = bonded_text.split('\n')
-            splited_bonded_text[int(change_row_num) - 1] = target_txt[index_of_first_of_replacetext + 1:index_of_end_of_replacetext]
-            output_txt += '\n'.join(splited_bonded_text)
+            if change_row_num[0] == '$':
+                output_txt += bonded_text.replace(change_row_num, )
+            else:
+                splited_bonded_text = bonded_text.split('\n')
+                splited_bonded_text[int(change_row_num) - 1] = target_txt[index_of_first_of_replacetext + 1:index_of_end_of_replacetext]
+                output_txt += '\n'.join(splited_bonded_text)
 
             i = index_of_end_of_replacetext + 2
 
