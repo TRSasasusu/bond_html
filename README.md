@@ -1,5 +1,5 @@
 # bond_html
-You can include html in html without php and js.
+You can include html in html without php or js.
 ## Usage 1
 ### hoge.html
 ```
