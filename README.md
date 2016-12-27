@@ -57,9 +57,9 @@ Then,
 ```  
 Then,  
 ```
-$ python foo.html -o foo_out.html
-$ python bar.html -o bar_out.html
-$ python baz.html -o baz_out.html
+$ python bond_html.py foo.html -o foo_out.html
+$ python bond_html.py bar.html -o bar_out.html
+$ python bond_html.py baz.html -o baz_out.html
 ```
 ### foo_out.html
 ```
@@ -91,6 +91,36 @@ $ python baz.html -o baz_out.html
 <li>foo</li>
 <li>bar</li>
 <li>BAZ</li>
+	</body>
+</html>
+```
+## Usage 3
+### vartest.html
+```
+<html>
+	#BOND_HTML("bond.btml")
+	<body>
+#BOND_HTML("var.btml", ${i}, "200", 2, "You should use https.")
+	</body>
+</html>
+```
+### var.btml
+```
+Status Code: ${i}
+You should use http.
+${404}
+```
+Then,  
+```
+$ python bond_html.py vartest.html -o vartest_out.html
+```
+### vartest_out.html
+```
+<html>
+	<head><title>bond_html</title></head>
+	<body>
+Status Code: 200
+You should use https.
 	</body>
 </html>
 ```
